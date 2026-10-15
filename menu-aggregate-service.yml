@@ -57,7 +57,7 @@ resilience4j:
         enable-randomized-wait: true #  Включаем случайную задержку между попытками.
         randomized-wait-factor: ${external.retry-jitter} # Это означает, что фактическое время ожидания будет варьироваться на retry-jitter% от исходного значения.
         retry-exceptions: # Список исключений, при возникновении которых будут выполнены повторные попытки.
-          - ru.javaops.cloudjava.aggregateservice.exception.MenuAggregateException
+          - ru.itlab.aggregateservice.exception.MenuAggregateException
         ignore-exceptions:
           - io.github.resilience4j.circuitbreaker.CallNotPermittedException
     instances:
